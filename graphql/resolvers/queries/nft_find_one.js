@@ -1,14 +1,30 @@
-export default function nft_find_one(_, query, { models }) { 
-    const {
+import NFT from "../../../db/models/nft/nft.js"
+import { GraphQLError } from 'graphql'
+
+export default async function nft_find_one(_, query, { models }) {
+    let {
         id
     } = query
 
-    //TO-DO
+    id = parseInt(id)
 
-    return {
-        mint_to:"mint_to",
-        prompt:"prompt",
-        minted:false,
-        id:0
+    if (id == NaN || id < 0) {
+        throw new GraphQLError('Invalid ID', {
+            extensions: {
+                code: 'BAD_USER_INPUT',
+            },
+        })
     }
+
+    const res = await NFT.findOne({ id })
+
+    if (!res) {
+        throw new GraphQLError('Nft Not Found', {
+            extensions: {
+                code: 'BAD_USER_INPUT',
+            },
+        })
+    }
+
+    return res
 }
