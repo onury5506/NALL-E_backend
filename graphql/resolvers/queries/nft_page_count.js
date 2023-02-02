@@ -1,6 +1,6 @@
-export default function nft_find_one(_, query, { models }) {
+import NFT from "../../../db/models/nft/nft.js"
 
-    //TO-DO
+export default async function nft_page_count(_, query, { models }) {
 
-    return -1
+    return Math.ceil(await NFT.count() / 10)
 }
