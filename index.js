@@ -7,6 +7,7 @@ import cors from "cors"
 import models from "./db/models/index.js"
 import { log } from "./utils/log.js"
 import dotenv from "dotenv"
+import connectDB from "./db/connectDB.js"
 
 dotenv.config()
 
@@ -15,11 +16,10 @@ const app = express()
 const apolloServer = new ApolloServer({
     typeDefs,
     resolvers,
-    context: {
-        models
-    },
     introspection: process.env.PRODUCTION.toLowerCase() == "true" ? false : true
 })
+
+connectDB()
 
 await apolloServer.start()
 
