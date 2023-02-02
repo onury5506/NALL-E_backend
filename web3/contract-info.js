@@ -1,6 +1,9 @@
+import dotenv from "dotenv"
+dotenv.config()
+
 export default {
     "contractName": "NALLENFT",
-    "address": "0x3BCD19c37f05F5551397507291050E4B55d0fc90",
+    "address": process.env.CONTRACT_ADDRESS,
     "abi": [
       {
         "inputs": [],
