@@ -1,13 +1,13 @@
 export default `
     type NFT{
-        id: ID!
+        id: Int!
         mint_to: String!
         prompt: String!
         minted: Boolean!
     }
 
     type Query{
-        nft_find_one(id: ID!): NFT!
+        nft_find_one(id: Int!): NFT!
         nft_page_count: Int
         nft_page(page: Int): [NFT]
     }
