@@ -10,6 +10,7 @@ export default `
         nft_find_one(id: Int!): NFT!
         nft_page_count: Int
         nft_page(page: Int): [NFT]
+        nft_random: NFT!
     }
 
     input NFT_MINT_INPUT{
