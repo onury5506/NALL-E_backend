@@ -26,6 +26,7 @@ export async function generateAndUpload(id, prompt) {
     return await s3.upload({
         Bucket: process.env.AWS_S3_BUCKET_NAME,
         Key: `${id}.png`,
-        Body: Buffer.from(await blob.arrayBuffer())
+        Body: Buffer.from(await blob.arrayBuffer()),
+        ContentType: "image/png"
     }).promise()
 }
