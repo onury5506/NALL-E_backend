@@ -9,3 +9,7 @@ web3.eth.defaultAccount = account.address
 
 export const contract = new web3.eth.Contract(contractInfo.abi,contractInfo.address)
 export const accountAddress = account.address
+
+export function getGasPrice(){
+    return web3.eth.getGasPrice()
+}
