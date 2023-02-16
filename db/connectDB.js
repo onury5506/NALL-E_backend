@@ -1,8 +1,5 @@
-import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import {log, log_error} from '../utils/log.js'
-
-dotenv.config()
 
 const MONGODB_URL = process.env.MONGODB_URL
 

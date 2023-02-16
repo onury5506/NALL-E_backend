@@ -1,6 +1,3 @@
-import dotenv from "dotenv"
-dotenv.config()
-
 export default {
     "contractName": "NALLENFT",
     "address": process.env.CONTRACT_ADDRESS,

@@ -1,16 +1,13 @@
+import 'dotenv/config'
 import express from "express"
 import { ApolloServer } from "@apollo/server"
 import { expressMiddleware } from '@apollo/server/express4'
 import typeDefs from "./graphql/types/index.js"
 import resolvers from "./graphql/resolvers/index.js"
 import cors from "cors"
-import models from "./db/models/index.js"
 import { log } from "./utils/log.js"
-import dotenv from "dotenv"
 import connectDB from "./db/connectDB.js"
 import nft_route from './routes/nft/nft.js'
-
-dotenv.config()
 
 const app = express()
 
