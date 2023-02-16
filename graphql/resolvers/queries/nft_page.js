@@ -11,7 +11,5 @@ export default async function nft_page(_, query, { models }) {
     const start = pageSize * page
     const end = Math.min(start + pageSize, count)
 
-    console.log({start,end})
-
     return await NFT.find({ id: { $gte: start, $lt: end } })
 }
