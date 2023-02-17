@@ -23,7 +23,7 @@ await apolloServer.start()
 
 app.use("/graphql", cors(), express.json(), expressMiddleware(apolloServer))
 
-app.use("/nft", nft_route)
+app.use("/nft", cors(), nft_route)
 
 app.listen(4000, () => {
     log(`Server listening on port 4000`)
