@@ -4,10 +4,12 @@ https://nalle.onuryildiz.dev
 
 NALLE is an NFT project that allows users to create free NFTs using DALL-E AI and the Polygon network. This project has three main components: backend, frontend, and smart contract.
 
+https://user-images.githubusercontent.com/11387414/223708840-2f693904-8696-4291-a4ff-916271faef31.mp4
+
 ## Repositories
-backend : https://github.com/onury5506/NALL-E_frontend
-frontend : https://github.com/onury5506/NALL-E_backend
-smart contract : https://github.com/onury5506/NALL-E_smart-contract
+- backend : https://github.com/onury5506/NALL-E_frontend
+- frontend : https://github.com/onury5506/NALL-E_backend
+- smart contract : https://github.com/onury5506/NALL-E_smart-contract
 
 ## Technologies Used
 
